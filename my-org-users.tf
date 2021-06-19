@@ -20,7 +20,7 @@ resource "okta_user" "users" {
   for_each           = local.users
   first_name         = each.value.first_name
   last_name          = each.value.last_name
-  login              = "john.smith@example.com"
+  login              = "${each.value.last_name}-john.smith@example.com"
   email              = "${each.value.last_name}-john.smith@example.com"
   city               = "New York"
   cost_center        = "10"
