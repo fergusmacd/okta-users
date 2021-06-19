@@ -17,7 +17,7 @@ locals {
 }
 
 resource "okta_user" "users" {
-  for_each = local.users
+  for_each           = local.users
   first_name         = each.value.first_name
   last_name          = each.value.last_name
   login              = "john.smith@example.com"
