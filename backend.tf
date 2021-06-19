@@ -1,10 +1,10 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "<your-org>"
+    organization = "mononoke"
 
     workspaces {
-      name = "<change-me>"
+      name = "okta-users"
     }
   }
 }
